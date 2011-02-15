@@ -1,0 +1,12 @@
+{
+  "name": "NetBible by Chouser",
+  "version": "0.1",
+  "description": "Chouser's adjustments to the net.bible.org UI",
+  "incognito": "spanning",
+  "content_scripts": [
+	{
+	  "matches": ["http://net.bible.org/*"],
+	  "js": ["netbible-chouser.js"]
+	}
+  ]
+}
