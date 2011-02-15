@@ -1,2 +1,15 @@
-.hide-refs .vref { display: none; }
+.hide-refs .vref {
+  position: relative;
+  float: left;
+  left: -1em;
+  margin-right: -5em;
+  padding: 0 1ex;
+  border: 1px #ccc solid;
+  background: #fff;
+  opacity: 0.0;
+  -webkit-transition: opacity 0.2s;
+}
+.hide-refs .vref:hover {
+  opacity: 0.9;
+}
 .hide-notes .chunk sup { display: none; }
