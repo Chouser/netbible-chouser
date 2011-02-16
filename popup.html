@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body { margin: 0; }
+      h4 {
+        margin: 0;
+        font-size: 110%;
+        text-align: center;
+      }
+      label {
+        display: block;
+        white-space: nowrap;
+        font-family: Arial, sans-serif;
+        font-size: 90%;
+      }
+    </style>
+    <script>
+      function send_update() {
+        var code = ("document.body.className = '" +
+          (document.getElementById('toggle_refs').checked ? '' : 'hide-refs') +
+          ' ' +
+          (document.getElementById('toggle_notes').checked? '' : 'hide-notes')+
+          "'");
+        chrome.tabs.executeScript(null, {code: code});
+      }
+    </script>
+  </head>
+  <body>
+    <h4>NET Bible tweaks</h4>
+    <label for="toggle_refs" style="margin: 0 1em; display: inline">
+      <input id="toggle_refs" type="checkbox" checked="checked"
+      onchange="send_update()" /> Show verse references in text</label>
+    <label for="toggle_notes" style="margin: 0 1em; display: inline">
+      <input id="toggle_notes" type="checkbox" checked="checked" 
+      onchange="send_update()" /> Show NET Note links in text</label>
+  </body>
+</html>

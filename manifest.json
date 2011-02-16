@@ -1,13 +1,26 @@
 {
-  "name": "NetBible by Chouser",
-  "version": "0.3",
-  "description": "Chouser's adjustments to the net.bible.org UI",
+  "name": "NET Bible tweaks by Chouser",
+  "version": "0.4",
+  "description": "Chouser's tweaks to net.bible.org",
   "incognito": "spanning",
+  "icons": {
+    "16": "icon16.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "tabs",
+    "http://net.bible.org/"
+  ],
+  "background_page": "background.html",
+  "page_action": {
+    "default_icon": "icon16.png",
+    "default_title": "NET Bible Tweaks",
+    "default_popup": "popup.html"
+  },
   "content_scripts": [
 	{
 	  "matches": ["http://net.bible.org/*"],
-	  "css": ["netbible-chouser.css"],
-	  "js": ["netbible-chouser.js"]
+	  "css": ["content.css"]
 	}
   ]
 }

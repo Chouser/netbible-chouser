@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html><script>
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+  if(tab.url.indexOf('/net.bible.org/') > -1) {
+    chrome.pageAction.show(tabId);
+  }
+});
+</script></html>
